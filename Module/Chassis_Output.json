@@ -1,0 +1,48 @@
+{
+  "metadata": {
+    "id": "CHASSIS_OUTPUT",
+    "name": "Chassis Output",
+    "domain": "chassis",
+    "version": "1.0.0",
+    "description": "Minimal chassis aggregation",
+    "enabled": true
+  },
+  "inputs": {},
+  "parameters": {},
+  "state": {},
+  "formula": {
+    "outputs": {
+      "chassis_load": {
+        "op": "add",
+        "args": [
+          {
+            "op": "dependency",
+            "module": "TYRE_FORCE",
+            "output": "longitudinal_force"
+          },
+          {
+            "op": "dependency",
+            "module": "SUSPENSION_HEAVE",
+            "output": "heave_force"
+          }
+        ]
+      }
+    }
+  },
+  "conditions": [],
+  "outputs": {
+    "chassis_load": {
+      "type": "number"
+    }
+  },
+  "dependencies": [
+    "TYRE_FORCE",
+    "SUSPENSION_HEAVE"
+  ],
+  "limits": {
+    "chassis_load": [
+      -300000,
+      300000
+    ]
+  }
+}
