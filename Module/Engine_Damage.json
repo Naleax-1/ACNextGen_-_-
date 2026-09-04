@@ -1,0 +1,57 @@
+{
+  "metadata": {
+    "id": "ENGINE_DAMAGE",
+    "name": "Engine Damage",
+    "domain": "engine",
+    "version": "1.0.0",
+    "description": "Engine health torque derating",
+    "enabled": true
+  },
+  "inputs": {
+    "health": {
+      "type": "number",
+      "source": "engine.health"
+    }
+  },
+  "parameters": {
+    "minimum_multiplier": 0.1
+  },
+  "state": {
+    "health": {
+      "type": "number",
+      "default": 1
+    }
+  },
+  "formula": {
+    "outputs": {
+      "damage_multiplier": {
+        "op": "max",
+        "args": [
+          {
+            "op": "input",
+            "name": "health"
+          },
+          {
+            "op": "parameter",
+            "name": "minimum_multiplier"
+          }
+        ]
+      }
+    }
+  },
+  "conditions": [],
+  "outputs": {
+    "damage_multiplier": {
+      "type": "number"
+    }
+  },
+  "dependencies": [
+    "ENGINE_CORE"
+  ],
+  "limits": {
+    "damage_multiplier": [
+      0.1,
+      1
+    ]
+  }
+}

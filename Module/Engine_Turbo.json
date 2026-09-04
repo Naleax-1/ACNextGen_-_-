@@ -1,0 +1,84 @@
+{
+  "metadata": {
+    "id": "ENGINE_TURBO",
+    "name": "Turbo",
+    "domain": "engine",
+    "version": "1.0.0",
+    "description": "Turbo torque multiplier",
+    "enabled": true
+  },
+  "inputs": {
+    "rpm": {
+      "type": "number",
+      "source": "engine.rpm"
+    }
+  },
+  "parameters": {
+    "boost_gain": 0.18,
+    "rpm_ref": 3500
+  },
+  "state": {},
+  "formula": {
+    "outputs": {
+      "turbo_multiplier": {
+        "op": "add",
+        "args": [
+          {
+            "op": "constant",
+            "value": 1
+          },
+          {
+            "op": "multiply",
+            "args": [
+              {
+                "op": "parameter",
+                "name": "boost_gain"
+              },
+              {
+                "op": "clamp",
+                "args": [
+                  {
+                    "op": "divide",
+                    "args": [
+                      {
+                        "op": "input",
+                        "name": "rpm"
+                      },
+                      {
+                        "op": "parameter",
+                        "name": "rpm_ref"
+                      }
+                    ]
+                  },
+                  {
+                    "op": "constant",
+                    "value": 0
+                  },
+                  {
+                    "op": "constant",
+                    "value": 2
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "conditions": [],
+  "outputs": {
+    "turbo_multiplier": {
+      "type": "number"
+    }
+  },
+  "dependencies": [
+    "ENGINE_CORE"
+  ],
+  "limits": {
+    "turbo_multiplier": [
+      0,
+      2
+    ]
+  }
+}

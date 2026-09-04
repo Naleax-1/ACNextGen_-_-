@@ -1,0 +1,50 @@
+{
+  "metadata": {
+    "id": "SUSPENSION_HEAVE",
+    "name": "Suspension Heave",
+    "domain": "suspension",
+    "version": "1.0.0",
+    "description": "Minimal heave specification",
+    "enabled": true
+  },
+  "inputs": {
+    "wheel_load": {
+      "type": "number",
+      "source": "vehicle.wheel_load"
+    }
+  },
+  "parameters": {
+    "stiffness": 30000
+  },
+  "state": {},
+  "formula": {
+    "outputs": {
+      "heave_force": {
+        "op": "multiply",
+        "args": [
+          {
+            "op": "input",
+            "name": "wheel_load"
+          },
+          {
+            "op": "parameter",
+            "name": "stiffness"
+          }
+        ]
+      }
+    }
+  },
+  "conditions": [],
+  "outputs": {
+    "heave_force": {
+      "type": "number"
+    }
+  },
+  "dependencies": [],
+  "limits": {
+    "heave_force": [
+      -200000,
+      200000
+    ]
+  }
+}

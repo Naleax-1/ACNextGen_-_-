@@ -1,0 +1,60 @@
+{
+  "metadata": {
+    "id": "ENGINE_OUTPUT",
+    "name": "Engine Output",
+    "domain": "engine",
+    "version": "1.0.0",
+    "description": "Final engine torque gateway output",
+    "enabled": true
+  },
+  "inputs": {},
+  "parameters": {},
+  "state": {},
+  "formula": {
+    "outputs": {
+      "torque_nm": {
+        "op": "multiply",
+        "args": [
+          {
+            "op": "dependency",
+            "module": "ENGINE_CORE",
+            "output": "base_torque_nm"
+          },
+          {
+            "op": "dependency",
+            "module": "ENGINE_TURBO",
+            "output": "turbo_multiplier"
+          },
+          {
+            "op": "dependency",
+            "module": "ENGINE_THERMAL",
+            "output": "thermal_multiplier"
+          },
+          {
+            "op": "dependency",
+            "module": "ENGINE_DAMAGE",
+            "output": "damage_multiplier"
+          }
+        ]
+      }
+    }
+  },
+  "conditions": [],
+  "outputs": {
+    "torque_nm": {
+      "type": "number"
+    }
+  },
+  "dependencies": [
+    "ENGINE_CORE",
+    "ENGINE_TURBO",
+    "ENGINE_THERMAL",
+    "ENGINE_DAMAGE"
+  ],
+  "limits": {
+    "torque_nm": [
+      0,
+      2000
+    ]
+  }
+}

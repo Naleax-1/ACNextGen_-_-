@@ -1,0 +1,72 @@
+{
+  "metadata": {
+    "id": "ENGINE_CORE",
+    "name": "Engine Core",
+    "domain": "engine",
+    "version": "1.0.0",
+    "description": "Base engine torque specification",
+    "enabled": true
+  },
+  "inputs": {
+    "rpm": {
+      "type": "number",
+      "source": "engine.rpm"
+    },
+    "throttle": {
+      "type": "number",
+      "source": "driver.throttle"
+    }
+  },
+  "parameters": {
+    "idle_torque": 80,
+    "peak_torque": 420,
+    "redline_rpm": 7200
+  },
+  "state": {},
+  "formula": {
+    "outputs": {
+      "base_torque_nm": {
+        "op": "add",
+        "args": [
+          {
+            "op": "parameter",
+            "name": "idle_torque"
+          },
+          {
+            "op": "multiply",
+            "args": [
+              {
+                "op": "parameter",
+                "name": "peak_torque"
+              },
+              {
+                "op": "input",
+                "name": "throttle"
+              }
+            ]
+          }
+        ]
+      },
+      "redline_rpm": {
+        "op": "parameter",
+        "name": "redline_rpm"
+      }
+    }
+  },
+  "conditions": [],
+  "outputs": {
+    "base_torque_nm": {
+      "type": "number"
+    },
+    "redline_rpm": {
+      "type": "number"
+    }
+  },
+  "dependencies": [],
+  "limits": {
+    "base_torque_nm": [
+      0,
+      1000
+    ]
+  }
+}

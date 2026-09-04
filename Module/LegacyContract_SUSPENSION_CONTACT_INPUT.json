@@ -1,0 +1,22 @@
+{
+  "metadata": {
+    "id": "LEGACY_SUSPENSION_CONTACT_INPUT",
+    "name": "suspension_contact_input",
+    "domain": "suspension",
+    "version": "legacy-contract-1.0.0",
+    "description": "Migration contract generated from preserved pre-R1 Lua module. Not executable by the generic runtime until its physics specification is authored.",
+    "enabled": false,
+    "migration_source": "Legacy/modules/suspension_contact_input.lua",
+    "migration_status": "PENDING_SPECIFICATION"
+  },
+  "inputs": {},
+  "parameters": {},
+  "state": {},
+  "formula": {
+    "outputs": {}
+  },
+  "conditions": [],
+  "outputs": {},
+  "dependencies": [],
+  "limits": {}
+}

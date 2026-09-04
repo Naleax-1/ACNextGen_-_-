@@ -1,0 +1,120 @@
+{
+  "metadata": {
+    "id": "ENGINE_THERMAL",
+    "name": "Engine Thermal",
+    "domain": "engine",
+    "version": "1.0.0",
+    "description": "Thermal torque derating",
+    "enabled": true
+  },
+  "inputs": {
+    "coolant_c": {
+      "type": "number",
+      "source": "engine.coolant_c"
+    }
+  },
+  "parameters": {
+    "soft_limit_c": 105,
+    "hard_limit_c": 125
+  },
+  "state": {
+    "coolant_c": {
+      "type": "number",
+      "default": 25
+    }
+  },
+  "formula": {
+    "outputs": {
+      "thermal_multiplier": {
+        "op": "clamp",
+        "args": [
+          {
+            "op": "subtract",
+            "args": [
+              {
+                "op": "constant",
+                "value": 1
+              },
+              {
+                "op": "multiply",
+                "args": [
+                  {
+                    "op": "clamp",
+                    "args": [
+                      {
+                        "op": "divide",
+                        "args": [
+                          {
+                            "op": "subtract",
+                            "args": [
+                              {
+                                "op": "input",
+                                "name": "coolant_c"
+                              },
+                              {
+                                "op": "parameter",
+                                "name": "soft_limit_c"
+                              }
+                            ]
+                          },
+                          {
+                            "op": "subtract",
+                            "args": [
+                              {
+                                "op": "parameter",
+                                "name": "hard_limit_c"
+                              },
+                              {
+                                "op": "parameter",
+                                "name": "soft_limit_c"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "op": "constant",
+                        "value": 0
+                      },
+                      {
+                        "op": "constant",
+                        "value": 1
+                      }
+                    ]
+                  },
+                  {
+                    "op": "constant",
+                    "value": 0.75
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "op": "constant",
+            "value": 0.25
+          },
+          {
+            "op": "constant",
+            "value": 1
+          }
+        ]
+      }
+    }
+  },
+  "conditions": [],
+  "outputs": {
+    "thermal_multiplier": {
+      "type": "number"
+    }
+  },
+  "dependencies": [
+    "ENGINE_CORE"
+  ],
+  "limits": {
+    "thermal_multiplier": [
+      0.25,
+      1
+    ]
+  }
+}

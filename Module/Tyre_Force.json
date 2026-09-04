@@ -1,0 +1,63 @@
+{
+  "metadata": {
+    "id": "TYRE_FORCE",
+    "name": "Tyre Force",
+    "domain": "tyre",
+    "version": "1.0.0",
+    "description": "Minimal tyre force specification",
+    "enabled": true
+  },
+  "inputs": {
+    "wheel_load": {
+      "type": "number",
+      "source": "vehicle.wheel_load"
+    },
+    "slip": {
+      "type": "number",
+      "source": "vehicle.slip"
+    }
+  },
+  "parameters": {
+    "stiffness": 1.8
+  },
+  "state": {},
+  "formula": {
+    "outputs": {
+      "longitudinal_force": {
+        "op": "multiply",
+        "args": [
+          {
+            "op": "input",
+            "name": "wheel_load"
+          },
+          {
+            "op": "multiply",
+            "args": [
+              {
+                "op": "parameter",
+                "name": "stiffness"
+              },
+              {
+                "op": "input",
+                "name": "slip"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "conditions": [],
+  "outputs": {
+    "longitudinal_force": {
+      "type": "number"
+    }
+  },
+  "dependencies": [],
+  "limits": {
+    "longitudinal_force": [
+      -50000,
+      50000
+    ]
+  }
+}

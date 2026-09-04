@@ -1,0 +1,22 @@
+{
+  "metadata": {
+    "id": "LEGACY_TIRE_THERMAL_BRUSH",
+    "name": "tire_thermal_brush",
+    "domain": "tyre",
+    "version": "legacy-contract-1.0.0",
+    "description": "Migration contract generated from preserved pre-R1 Lua module. Not executable by the generic runtime until its physics specification is authored.",
+    "enabled": false,
+    "migration_source": "Legacy/modules/tire_thermal_brush.lua",
+    "migration_status": "PENDING_SPECIFICATION"
+  },
+  "inputs": {},
+  "parameters": {},
+  "state": {},
+  "formula": {
+    "outputs": {}
+  },
+  "conditions": [],
+  "outputs": {},
+  "dependencies": [],
+  "limits": {}
+}
