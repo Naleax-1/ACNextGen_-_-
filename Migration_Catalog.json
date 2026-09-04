@@ -1,0 +1,396 @@
+{
+  "version": "R1.0",
+  "count": 65,
+  "contracts": [
+    {
+      "id": "LEGACY_ARM_COMPLIANCE",
+      "source": "Legacy/modules/arm_compliance.lua",
+      "domain": "chassis",
+      "status": "PENDING_SPECIFICATION"
+    },
+    {
+      "id": "LEGACY_BODY_RIGIDITY_ESTIMATOR",
+      "source": "Legacy/modules/body_rigidity_estimator.lua",
+      "domain": "chassis",
+      "status": "PENDING_SPECIFICATION"
+    },
+    {
+      "id": "LEGACY_BRAKE_FADE",
+      "source": "Legacy/modules/brake_fade.lua",
+      "domain": "brake",
+      "status": "PENDING_SPECIFICATION"
+    },
+    {
+      "id": "LEGACY_BRAKE_LOCK",
+      "source": "Legacy/modules/brake_lock.lua",
+      "domain": "brake",
+      "status": "PENDING_SPECIFICATION"
+    },
+    {
+      "id": "LEGACY_BRAKE_SYSTEM",
+      "source": "Legacy/modules/brake_system.lua",
+      "domain": "brake",
+      "status": "PENDING_SPECIFICATION"
+    },
+    {
+      "id": "LEGACY_CASTER_EFFECT",
+      "source": "Legacy/modules/caster_effect.lua",
+      "domain": "other",
+      "status": "PENDING_SPECIFICATION"
+    },
+    {
+      "id": "LEGACY_CHASSIS_ENERGY",
+      "source": "Legacy/modules/chassis_energy.lua",
+      "domain": "chassis",
+      "status": "PENDING_SPECIFICATION"
+    },
+    {
+      "id": "LEGACY_CHASSIS_FLEX",
+      "source": "Legacy/modules/chassis_flex.lua",
+      "domain": "chassis",
+      "status": "PENDING_SPECIFICATION"
+    },
+    {
+      "id": "LEGACY_CHASSIS_ROLL",
+      "source": "Legacy/modules/chassis_roll.lua",
+      "domain": "chassis",
+      "status": "PENDING_SPECIFICATION"
+    },
+    {
+      "id": "LEGACY_CLUTCH_ANGULAR",
+      "source": "Legacy/modules/clutch_angular.lua",
+      "domain": "drivetrain",
+      "status": "PENDING_SPECIFICATION"
+    },
+    {
+      "id": "LEGACY_COMPLIANCE_STACK",
+      "source": "Legacy/modules/compliance_stack.lua",
+      "domain": "chassis",
+      "status": "PENDING_SPECIFICATION"
+    },
+    {
+      "id": "LEGACY_CONTACT_QUALITY",
+      "source": "Legacy/modules/contact_quality.lua",
+      "domain": "tyre",
+      "status": "PENDING_SPECIFICATION"
+    },
+    {
+      "id": "LEGACY_CONTROL_ARM",
+      "source": "Legacy/modules/control_arm.lua",
+      "domain": "chassis",
+      "status": "PENDING_SPECIFICATION"
+    },
+    {
+      "id": "LEGACY_DAMAGE_EVENT",
+      "source": "Legacy/modules/damage_event.lua",
+      "domain": "damage",
+      "status": "PENDING_SPECIFICATION"
+    },
+    {
+      "id": "LEGACY_DAMAGE_STATE",
+      "source": "Legacy/modules/damage_state.lua",
+      "domain": "damage",
+      "status": "PENDING_SPECIFICATION"
+    },
+    {
+      "id": "LEGACY_DAMPER_HYSTERESIS",
+      "source": "Legacy/modules/damper_hysteresis.lua",
+      "domain": "suspension",
+      "status": "PENDING_SPECIFICATION"
+    },
+    {
+      "id": "LEGACY_DAMPER_MODEL",
+      "source": "Legacy/modules/damper_model.lua",
+      "domain": "suspension",
+      "status": "PENDING_SPECIFICATION"
+    },
+    {
+      "id": "LEGACY_DIFF_LSD",
+      "source": "Legacy/modules/diff_lsd.lua",
+      "domain": "drivetrain",
+      "status": "PENDING_SPECIFICATION"
+    },
+    {
+      "id": "LEGACY_DIFF_LSD_OBSERVER",
+      "source": "Legacy/modules/diff_lsd_observer.lua",
+      "domain": "drivetrain",
+      "status": "PENDING_SPECIFICATION"
+    },
+    {
+      "id": "LEGACY_DIFFERENTIAL_ANGULAR",
+      "source": "Legacy/modules/differential_angular.lua",
+      "domain": "drivetrain",
+      "status": "PENDING_SPECIFICATION"
+    },
+    {
+      "id": "LEGACY_DRIVELINE_ANGULAR",
+      "source": "Legacy/modules/driveline_angular.lua",
+      "domain": "drivetrain",
+      "status": "PENDING_SPECIFICATION"
+    },
+    {
+      "id": "LEGACY_DRIVELINE_WINDUP",
+      "source": "Legacy/modules/driveline_windup.lua",
+      "domain": "drivetrain",
+      "status": "PENDING_SPECIFICATION"
+    },
+    {
+      "id": "LEGACY_DRIVETRAIN",
+      "source": "Legacy/modules/drivetrain.lua",
+      "domain": "drivetrain",
+      "status": "PENDING_SPECIFICATION"
+    },
+    {
+      "id": "LEGACY_ENGINE_COMBUSTION_WAVEFORM",
+      "source": "Legacy/modules/engine_combustion_waveform.lua",
+      "domain": "engine",
+      "status": "PENDING_SPECIFICATION"
+    },
+    {
+      "id": "LEGACY_ENGINE_DAMAGE",
+      "source": "Legacy/modules/engine_damage.lua",
+      "domain": "engine",
+      "status": "PENDING_SPECIFICATION"
+    },
+    {
+      "id": "LEGACY_ENGINE_PROTOTYPE",
+      "source": "Legacy/modules/engine_prototype.lua",
+      "domain": "engine",
+      "status": "PENDING_SPECIFICATION"
+    },
+    {
+      "id": "LEGACY_ENGINE_SYSTEM",
+      "source": "Legacy/modules/engine_system.lua",
+      "domain": "engine",
+      "status": "PENDING_SPECIFICATION"
+    },
+    {
+      "id": "LEGACY_ENGINE_THERMAL",
+      "source": "Legacy/modules/engine_thermal.lua",
+      "domain": "thermal",
+      "status": "PENDING_SPECIFICATION"
+    },
+    {
+      "id": "LEGACY_GEARBOX_ANGULAR",
+      "source": "Legacy/modules/gearbox_angular.lua",
+      "domain": "drivetrain",
+      "status": "PENDING_SPECIFICATION"
+    },
+    {
+      "id": "LEGACY_IMPACT_SENSOR",
+      "source": "Legacy/modules/impact_sensor.lua",
+      "domain": "damage",
+      "status": "PENDING_SPECIFICATION"
+    },
+    {
+      "id": "LEGACY_LOAD_PATH",
+      "source": "Legacy/modules/load_path.lua",
+      "domain": "chassis",
+      "status": "PENDING_SPECIFICATION"
+    },
+    {
+      "id": "LEGACY_LOAD_TRANSFER",
+      "source": "Legacy/modules/load_transfer.lua",
+      "domain": "chassis",
+      "status": "PENDING_SPECIFICATION"
+    },
+    {
+      "id": "LEGACY_MASS_BALANCE",
+      "source": "Legacy/modules/mass_balance.lua",
+      "domain": "chassis",
+      "status": "PENDING_SPECIFICATION"
+    },
+    {
+      "id": "LEGACY_NGP_CORE",
+      "source": "Legacy/modules/ngp_core.lua",
+      "domain": "core",
+      "status": "PENDING_SPECIFICATION"
+    },
+    {
+      "id": "LEGACY_OBSERVER",
+      "source": "Legacy/modules/observer.lua",
+      "domain": "observer",
+      "status": "PENDING_SPECIFICATION"
+    },
+    {
+      "id": "LEGACY_PHYSICS",
+      "source": "Legacy/modules/physics.lua",
+      "domain": "integration",
+      "status": "PENDING_SPECIFICATION"
+    },
+    {
+      "id": "LEGACY_PROGRESSIVE_SPRING",
+      "source": "Legacy/modules/progressive_spring.lua",
+      "domain": "suspension",
+      "status": "PENDING_SPECIFICATION"
+    },
+    {
+      "id": "LEGACY_ROAD_BODY_INPUT",
+      "source": "Legacy/modules/road_body_input.lua",
+      "domain": "chassis",
+      "status": "PENDING_SPECIFICATION"
+    },
+    {
+      "id": "LEGACY_ROAD_INPUT_INTERPRETER",
+      "source": "Legacy/modules/road_input_interpreter.lua",
+      "domain": "road",
+      "status": "PENDING_SPECIFICATION"
+    },
+    {
+      "id": "LEGACY_SLIP_RECOVERY",
+      "source": "Legacy/modules/slip_recovery.lua",
+      "domain": "tyre",
+      "status": "PENDING_SPECIFICATION"
+    },
+    {
+      "id": "LEGACY_SPRUNG_MASS",
+      "source": "Legacy/modules/sprung_mass.lua",
+      "domain": "chassis",
+      "status": "PENDING_SPECIFICATION"
+    },
+    {
+      "id": "LEGACY_STEERING_DYNAMICS",
+      "source": "Legacy/modules/steering_dynamics.lua",
+      "domain": "steering",
+      "status": "PENDING_SPECIFICATION"
+    },
+    {
+      "id": "LEGACY_STEERING_MECHANISM",
+      "source": "Legacy/modules/steering_mechanism.lua",
+      "domain": "steering",
+      "status": "PENDING_SPECIFICATION"
+    },
+    {
+      "id": "LEGACY_SUSPENSION",
+      "source": "Legacy/modules/suspension.lua",
+      "domain": "suspension",
+      "status": "PENDING_SPECIFICATION"
+    },
+    {
+      "id": "LEGACY_SUSPENSION_CONTACT_INPUT",
+      "source": "Legacy/modules/suspension_contact_input.lua",
+      "domain": "suspension",
+      "status": "PENDING_SPECIFICATION"
+    },
+    {
+      "id": "LEGACY_THERMAL",
+      "source": "Legacy/modules/thermal.lua",
+      "domain": "thermal",
+      "status": "PENDING_SPECIFICATION"
+    },
+    {
+      "id": "LEGACY_TIRE_CARCASS",
+      "source": "Legacy/modules/tire_carcass.lua",
+      "domain": "tyre",
+      "status": "PENDING_SPECIFICATION"
+    },
+    {
+      "id": "LEGACY_TIRE_COMPLIANCE",
+      "source": "Legacy/modules/tire_compliance.lua",
+      "domain": "tyre",
+      "status": "PENDING_SPECIFICATION"
+    },
+    {
+      "id": "LEGACY_TIRE_CONTACT",
+      "source": "Legacy/modules/tire_contact.lua",
+      "domain": "tyre",
+      "status": "PENDING_SPECIFICATION"
+    },
+    {
+      "id": "LEGACY_TIRE_CONTACT_CORE",
+      "source": "Legacy/modules/tire_contact_core.lua",
+      "domain": "tyre",
+      "status": "PENDING_SPECIFICATION"
+    },
+    {
+      "id": "LEGACY_TIRE_CONTACT_RESPONSE",
+      "source": "Legacy/modules/tire_contact_response.lua",
+      "domain": "tyre",
+      "status": "PENDING_SPECIFICATION"
+    },
+    {
+      "id": "LEGACY_TIRE_DYNAMICS",
+      "source": "Legacy/modules/tire_dynamics.lua",
+      "domain": "tyre",
+      "status": "PENDING_SPECIFICATION"
+    },
+    {
+      "id": "LEGACY_TIRE_FORCE",
+      "source": "Legacy/modules/tire_force.lua",
+      "domain": "tyre",
+      "status": "PENDING_SPECIFICATION"
+    },
+    {
+      "id": "LEGACY_TIRE_HOP",
+      "source": "Legacy/modules/tire_hop.lua",
+      "domain": "tyre",
+      "status": "PENDING_SPECIFICATION"
+    },
+    {
+      "id": "LEGACY_TIRE_MEMORY",
+      "source": "Legacy/modules/tire_memory.lua",
+      "domain": "tyre",
+      "status": "PENDING_SPECIFICATION"
+    },
+    {
+      "id": "LEGACY_TIRE_STATE",
+      "source": "Legacy/modules/tire_state.lua",
+      "domain": "tyre",
+      "status": "PENDING_SPECIFICATION"
+    },
+    {
+      "id": "LEGACY_TIRE_THERMAL_BRUSH",
+      "source": "Legacy/modules/tire_thermal_brush.lua",
+      "domain": "tyre",
+      "status": "PENDING_SPECIFICATION"
+    },
+    {
+      "id": "LEGACY_TURBO_PROTOTYPE",
+      "source": "Legacy/modules/turbo_prototype.lua",
+      "domain": "engine",
+      "status": "PENDING_SPECIFICATION"
+    },
+    {
+      "id": "LEGACY_ULTRA_CHASSIS",
+      "source": "Legacy/modules/ultra_chassis.lua",
+      "domain": "chassis",
+      "status": "PENDING_SPECIFICATION"
+    },
+    {
+      "id": "LEGACY_VEHICLE_CONDITION",
+      "source": "Legacy/modules/vehicle_condition.lua",
+      "domain": "vehicle",
+      "status": "PENDING_SPECIFICATION"
+    },
+    {
+      "id": "LEGACY_VIRTUAL_INERTIA",
+      "source": "Legacy/modules/virtual_inertia.lua",
+      "domain": "other",
+      "status": "PENDING_SPECIFICATION"
+    },
+    {
+      "id": "LEGACY_WEIGHT_DISTRIBUTION",
+      "source": "Legacy/modules/weight_distribution.lua",
+      "domain": "chassis",
+      "status": "PENDING_SPECIFICATION"
+    },
+    {
+      "id": "LEGACY_WHEEL_AUDIT",
+      "source": "Legacy/modules/wheel_audit.lua",
+      "domain": "tyre",
+      "status": "PENDING_SPECIFICATION"
+    },
+    {
+      "id": "LEGACY_WHEEL_TIRE_REACTION",
+      "source": "Legacy/modules/wheel_tire_reaction.lua",
+      "domain": "tyre",
+      "status": "PENDING_SPECIFICATION"
+    },
+    {
+      "id": "LEGACY_YAW_MOMENT_BUDGET",
+      "source": "Legacy/modules/yaw_moment_budget.lua",
+      "domain": "chassis",
+      "status": "PENDING_SPECIFICATION"
+    }
+  ]
+}
